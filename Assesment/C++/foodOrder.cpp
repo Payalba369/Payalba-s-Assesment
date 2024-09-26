@@ -1,27 +1,22 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include<iostream>
 #include <conio.h>
 using namespace std;
 int main()
 {
-    char name[30], pizza1[]="Chicken Fazita" ,pizza2[]="Chicken Bar BQ" ,pizza3[]="Peri Peri" ,pizza4[]="Creamy Max", roll1[]="Chicken Chatni Roll", roll2[]="Chicken Mayo Roll", roll3[]="Veg Roll With Fries",bur1[]="Zinger Burger",bur2[]="Chicken Burger",bur3[]="Beef Burger";
-    char sand1[]="Club Sandwich", sand2[]="Chicken Crispy Sandwich", sand3[]="Extream Veg Sandwich";
-    char bir1[]="Chicken Biryani", bir2[]="Prawn Biryani", bir3[]="Beef Biryani",gotostart ;
-    int choice=0,pchoice,pchoice1, quantity;// time=40;
+    char name[30], piza1[]="Veg Exotic" ,piza2[]="Mrgarita" ,piza3[]="Peri Peri" ,piza4[]="Sweet Corn Delite";
+    char sand1[]="Club Sandwich", sand2[]="Veg Crispy Sandwich", sand3[]="Extream Veg Sandwich";
+    char bur1[]="Mexican Burger",bur2[]="Aloo Tikki Burger",bur3[]="Double Cheese Burger";
+    char roll1[]="Aloo Tikki Roll", roll2[]="Mexican Roll", roll3[]="Veg cream Roll " ;
+    char bir1[]="Veg Biryani", bir2[]="Hyderabadi Biryani", bir3[]="Shahi Korma Biryani",gotostart ;
+    int choice=0,tchoice,choice1, qty;// time=40;
     beginning:
     system("CLS");
-    cout<<"\t\t\t----------Carl's Jr. Fast Food-----------\n\n";
+    cout<<"\t\t\t=================Tops Tech. Fast Food=================\n\n";
     cout<<"Please Enter Your Name: ";
-    cin.getline(name, 20);
+    cin.getline(name, 30);
     cout<<"Hello "<<name<<"\n\nWhat would you like to order?\n\n";
-    cout<<"\t\t\t\t--------Menu--------\n\n";
+    cout<<"\t\t\t\t=================Menu=================\n\n";
     cout<<"1) Pizzas\n";
     cout<<"2) Burgers\n";
     cout<<"3) Sandwich\n";
@@ -31,55 +26,55 @@ int main()
     cin>>choice;
     if(choice==1)
      {
-        cout<<"\n1) "<<pizza1<<"\n";
-        cout<<"2) "<<pizza2<<"\n";
-        cout<<"3) "<<pizza3<<"\n";
-        cout<<"4) "<<pizza4<<"\n";
-        cout<<"\nPlease Enter which Flavour would you like to have?:";
-        cin>>pchoice;
-        if(pchoice>=1 && pchoice<=5)
+        cout<<"\n1) "<<piza1<<"\n";
+        cout<<"2) "<<piza2<<"\n";
+        cout<<"3) "<<piza3<<"\n";
+        cout<<"4) "<<piza4<<"\n";
+        cout<<"\nPlease Enter which type of Pizza would you like to have?:";
+        cin>>tchoice;
+        if(tchoice>=1 && tchoice<=5)
         {
-            cout<<"\n1) Small Rs.250\n"<<"2) Regular Rs.500\n"<<"3) Large Rs.900\n";
+            cout<<"\n1) Small Rs.155\n"<<"2) Regular Rs.350\n"<<"3) Large Rs.700\n";
             cout<<"\nChoose Size Please:";
-            cin>>pchoice1;
-            if(pchoice1>=1 && pchoice1<=3)
+            cin>>choice1;
+            if(choice1>=1 && choice1<=3)
             cout<<"\nPlease Enter Quantity: ";
-            cin>>quantity;
-            switch(pchoice1)
+            cin>>qty;
+            switch(choice1)
             {
-            case 1: choice = 250*quantity;
+            case 1: choice = 155*qty;
             break;
-            case 2: choice = 500*quantity;
+            case 2: choice = 350*qty;
             break;
-            case 3: choice = 900*quantity;
+            case 3: choice = 700*qty;
             break;
                   }
             system("CLS");
-            switch (pchoice1)
+            switch (choice1)
             {
              case 1:
              cout<<"\t\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<pizza1;
+             cout<<""<<qty<<" "<<piza1;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\n\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\n\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 2:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<"  "<<pizza2;
+             cout<<""<<qty<<"  "<<piza2;
              cout<<"\nYour Total Bill is "<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 3:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<pizza3;
+             cout<<""<<qty<<" "<<piza3;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 4:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<pizza4;
+             cout<<""<<qty<<" "<<piza4;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
             }
             cout<<"Would you like to order anything else? Y / N:";
@@ -87,7 +82,7 @@ int main()
             if(gotostart=='Y' || gotostart=='y')
             {
               goto beginning;
-              //return 0;
+
             }
         }
      }
@@ -96,42 +91,42 @@ int main()
         cout<<"\n1 "<<bur1<<" Rs.180"<<"\n";
         cout<<"2 "<<bur2<<" Rs.150"<<"\n";
         cout<<"3 "<<bur3<<" Rs.160"<<"\n";
-        //cout<<"4 "<<pizza4<<"\n";
+
         cout<<"\nPlease Enter which Burger you would like to have?: ";
-        cin>>pchoice1;
-        if(pchoice1>=1 && pchoice1<=3)
+        cin>>choice1;
+        if(choice1>=1 && choice1<=3)
         {
             cout<<"\nPlease Enter Quantity: ";
-            cin>>quantity;
-            switch(pchoice1)
+            cin>>qty;
+            switch(choice1)
             {
-            case 1: choice = 180*quantity;
+            case 1: choice = 180*qty;
             break;
-            case 2: choice = 150*quantity;
+            case 2: choice = 150*qty;
             break;
-            case 3: choice = 160*quantity;
+            case 3: choice = 160*qty;
             break;
             }
             system("CLS");
-            switch (pchoice1)
+            switch (choice1)
             {
              case 1:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<bur1;
+             cout<<""<<qty<<" "<<bur1;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food \n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food \n";
              break;
              case 2:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<"  "<<bur2;
+             cout<<""<<qty<<"  "<<bur2;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Pizza\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Pizza\n";
              break;
              case 3:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<bur3;
+             cout<<""<<qty<<" "<<bur3;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
             }
             cout<<"\nWould you like to order anything else? Y / N:";
@@ -139,7 +134,7 @@ int main()
             if(gotostart=='Y' || gotostart=='y')
             {
               goto beginning;
-              //return 0;
+
             }
  }
 }
@@ -148,42 +143,42 @@ int main()
         cout<<"\n1  "<<sand1<<" Rs.240"<<"\n";
         cout<<"2  "<<sand2<<" Rs.160"<<"\n";
         cout<<"3  "<<sand3<<" Rs.100"<<"\n";
-        //cout<<"4 "<<pizza4<<"\n";
+
         cout<<"\nPlease Enter which Sandwich you would like to have?:";
-        cin>>pchoice1;
-        if(pchoice1>=1 && pchoice1<=3)
+        cin>>choice1;
+        if(choice1>=1 && choice1<=3)
         {
             cout<<"\nPlease Enter Quantity: ";
-            cin>>quantity;
-            switch(pchoice1)
+            cin>>qty;
+            switch(choice1)
             {
-            case 1: choice = 240*quantity;
+            case 1: choice = 240*qty;
             break;
-            case 2: choice = 160*quantity;
+            case 2: choice = 160*qty;
             break;
-            case 3: choice = 100*quantity;
+            case 3: choice = 100*qty;
             break;
             }
             system("CLS");
-            switch (pchoice1)
+            switch (choice1)
             {
              case 1:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<sand1;
+             cout<<""<<qty<<" "<<sand1;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 2:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<"  "<<sand2;
+             cout<<""<<qty<<"  "<<sand2;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 3:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<sand2;
+             cout<<""<<qty<<" "<<sand2;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
             }
             cout<<"Would you like to order anything else? Y / N:";
@@ -191,51 +186,51 @@ int main()
             if(gotostart=='Y' || gotostart=='y')
             {
               goto beginning;
-              //return 0;
+
             }
-            }
-            }
+        }
+    }
      else if(choice==4)
      {
         cout<<"\n1 "<<roll1<<" Rs.150"<<"\n";
         cout<<"2 "<<roll2<<" Rs.100"<<"\n";
         cout<<"3 "<<roll3<<" Rs.120"<<"\n";
-        //cout<<"4 "<<pizza4<<"\n";
+
         cout<<"\nPlease Enter which you would like to have?: ";
-        cin>>pchoice1;
-        if(pchoice1>=1 && pchoice1<=3)
+        cin>>choice1;
+        if(choice1>=1 && choice1<=3)
         {
             cout<<"\nHow Much Rolls Do you want: ";
-            cin>>quantity;
-            switch(pchoice1)
+            cin>>qty;
+            switch(choice1)
             {
-            case 1: choice = 150*quantity;
+            case 1: choice = 150*qty;
             break;
-            case 2: choice = 100*quantity;
+            case 2: choice = 100*qty;
             break;
-            case 3: choice = 120*quantity;
+            case 3: choice = 120*qty;
             break;
             }
             system("CLS");
-            switch (pchoice1)
+            switch (choice1)
             {
              case 1:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<roll1;
+             cout<<""<<qty<<" "<<roll1;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 2:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<"  "<<roll2;
+             cout<<""<<qty<<"  "<<roll2;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 3:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<roll3;
+             cout<<""<<qty<<" "<<roll3;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
             }
  }
@@ -245,42 +240,42 @@ int main()
         cout<<"\n1 "<<bir1<<" Rs.160"<<"\n";
         cout<<"2 "<<bir2<<" Rs.220"<<"\n";
         cout<<"3 "<<bir3<<" Rs.140"<<"\n";
-        //cout<<"4 "<<pizza4<<"\n";
+
         cout<<"\nPlease Enter which Biryani you would like to have?:";
-        cin>>pchoice1;
-        if(pchoice1>=1 && pchoice1<=3)
+        cin>>choice1;
+        if(choice1>=1 && choice1<=3)
         {
             cout<<"\nPlease Enter Quantity: ";
-            cin>>quantity;
-            switch(pchoice1)
+            cin>>qty;
+            switch(choice1)
             {
-            case 1: choice = 160*quantity;
+            case 1: choice = 160*qty;
             break;
-            case 2: choice = 220*quantity;
+            case 2: choice = 220*qty;
             break;
-            case 3: choice = 140*quantity;
+            case 3: choice = 140*qty;
             break;
             }
             system("CLS");
-            switch (pchoice1)
+            switch (choice1)
             {
              case 1:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<bir1;
+             cout<<""<<qty<<" "<<bir1;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food \n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food \n";
              break;
              case 2:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<"  "<<bir2;
+             cout<<""<<qty<<"  "<<bir2;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
              case 3:
              cout<<"\t\t--------Your Order---------\n";
-             cout<<""<<quantity<<" "<<bir3;
+             cout<<""<<qty<<" "<<bir3;
              cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 40 Minutes";
-             cout<<"\nThank you For Ordering From Carl's Jr. Fast Food\n";
+             cout<<"\nThank you For Ordering From Tops Tech. Fast Food\n";
              break;
             }
             cout<<"Would you like to order anything else? Y / N:";
@@ -288,20 +283,20 @@ int main()
             if(gotostart=='Y' || gotostart=='y')
             {
               goto beginning;
-              //return 0;
+
             }
-            }
-            }
+        }
+    }
             else
             {
                 system("CLS");
                 cout<<"Please Select Right Option: \n";
-                cout<<"Would You like to Start the program again? Y / N: " ;
+                cout<<"Would You like to Show Menu again? Y / N: " ;
                 cin>>gotostart;
                 if(gotostart=='Y' || gotostart=='y')
                 {
                   goto beginning;
-              //return 0;
+
             }
             }
      getch();
